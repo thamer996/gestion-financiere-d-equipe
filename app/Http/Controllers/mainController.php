@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Models\earn;
+use App\Models\payment;
 
 class mainController extends Controller
 {
@@ -60,8 +62,12 @@ class mainController extends Controller
     }
     }
     function home(){
+        $earns = earn::latest()->paginate(5);
+        $payments = payment::latest()->paginate(5);
+
+        
         $data=['loggeduserinfo'=>admin::where('id','=',session('loggedUser'))->first()];
-        return view('home',$data);
+        return view('home',$data, compact('earns','payments'));
     }
     function logout(){
         if(session()->has('loggedUser')){

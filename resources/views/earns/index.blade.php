@@ -30,7 +30,17 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">Total of earns</span>
-                      <span class="info-box-number text-center text-muted mb-0">0$</span>
+                      <span class="info-box-number text-center text-muted mb-0">
+                      <?php
+                      $priceTotal = 0;
+                      foreach($earns as $earn){
+$price = $earn->price ;
+$priceTotal = $priceTotal + $price;
+}
+echo "$priceTotal $";
+?>  
+                      
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -38,7 +48,15 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">Earn Bills</span>
-                      <span class="info-box-number text-center text-muted mb-0">0</span>
+                      <span class="info-box-number text-center text-muted mb-0">
+                      <?php
+                      
+                      foreach($earns as $earn){
+                        
+}
+echo count($earns);
+?>  
+                      </span>
                     </div>
                   </div>
                 </div>

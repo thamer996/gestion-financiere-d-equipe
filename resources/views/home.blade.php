@@ -25,7 +25,7 @@
             
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{$loggeduserinfo['budget']}}</h3>
+                <h3>{{$loggeduserinfo['budget']}}$</h3>
 
                 <p>Budget</p>
               </div>
@@ -40,7 +40,15 @@
             
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>5300$<sup style="font-size: 20px"></sup></h3>
+                <h3>
+                <?php
+                      $priceTotal = 0;
+                      foreach($earns as $earn){
+$price = $earn->price ;
+$priceTotal = $priceTotal + $price;
+}
+echo "$priceTotal $";
+?>  <sup style="font-size: 20px"></sup></h3>
 
                 <p> total Earns</p>
               </div>
@@ -55,7 +63,15 @@
             
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65000$</h3>
+                <h3>
+                <?php
+                      $priceTotal = 0;
+                      foreach($payments as $payment){
+$price = $payment->price ;
+$priceTotal = $priceTotal + $price;
+}
+echo "$priceTotal $";
+?></h3>
 
                 <p>total payments</p>
               </div>

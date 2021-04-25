@@ -33,7 +33,15 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">Total amount spent</span>
-                      <span class="info-box-number text-center text-muted mb-0">2000$</span>
+                      <span class="info-box-number text-center text-muted mb-0">
+                      <?php
+                      $priceTotal = 0;
+                      foreach($payments as $payment){
+$price = $payment->price ;
+$priceTotal = $priceTotal + $price;
+}
+echo "$priceTotal $";
+?>  </span>
                     </div>
                   </div>
                 </div>
@@ -41,7 +49,15 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">Payment Bills</span>
-                      <span class="info-box-number text-center text-muted mb-0">20</span>
+                      <span class="info-box-number text-center text-muted mb-0">
+                      <?php
+                      
+                      foreach($payments as $payment){
+                        
+}
+echo count($payments);
+?>  
+                      </span>
                     </div>
                     
                   </div>
