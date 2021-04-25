@@ -64,7 +64,7 @@
                     <td>{{$worker->salary}}</td>
                     <td>{{$worker->phone_number}}</td>
                     <td>
-                    <a class="btn btn-success btn-sm" href="{{ route('payments.create', $worker->id) }}" role="button">pay</a>
+                    <a class="btn btn-success btn-sm" href="{{url('payworker/'.$worker->id) }}" role="button">pay</a>
                     </td>
                     <td> 
                     <form action="{{ route('workers.destroy', $worker->id) }}" method="POST"> 

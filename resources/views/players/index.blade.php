@@ -71,7 +71,7 @@
                 </div>
                 <div class="card-footer">
                   <div class="text-right">
-                  <a class="btn btn-block btn-success" href="{{url('addpayments')}}" role="button">pay</a>
+                  <a class="btn btn-block btn-success" href="{{url('payplayer/'.$player->id) }}" role="button">pay</a>
                   </div>
                 </div>
                 

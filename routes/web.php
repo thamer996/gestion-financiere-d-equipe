@@ -41,13 +41,18 @@ Route::group(['middleware'=>['AuthCheck']],function(){
     Route::resource('earns', earnController::class);
     Route::resource('payments', paymentController::class);
     Route::get('/players.index',[mainController::class,'player']);
+    Route::view('payworker','payworker');
+    Route::get('payworker/{id}','App\Http\Controllers\mainController@edit');
+    Route::get('payplayer/{id}','App\Http\Controllers\mainController@editp');
 });
 
 //Route::post('editworker','App\Http\Controllers\workerController@update');
 
 
 
-//Route::view('home','home');
+
+//Route::post('submit','App\Http\Controllers\paymentcontroller@store');
+
 
 
 /*Route::view('addearns','addearns');

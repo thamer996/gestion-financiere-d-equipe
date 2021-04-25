@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\earn;
 use App\Models\payment;
+use App\Models\worker;
+use App\Models\player;
+
 
 class mainController extends Controller
 {
@@ -79,4 +82,18 @@ class mainController extends Controller
         $data=['loggeduserinfo'=>admin::where('id','=',session('loggedUser'))->first()];
         return redirect()->route('players.index',$data);
     }
+    
+    public function edit($id){
+        
+        $workers=worker::find($id);
+        return view('payworker',['worker'=>$workers]);
+    
+    }
+    public function editp($id){
+        
+        $players=player::find($id);
+        return view('payplayer',['player'=>$players]);
+    
+    }
+     
 }

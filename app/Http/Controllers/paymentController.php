@@ -5,13 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\payment;
 
+use App\Models\worker;
+
 class paymentController extends Controller
 {
     public function index()
     {
         $payments = payment::latest()->paginate(5);
+        $workers = worker::latest()->paginate(5);
+        
 
-        return view('payments.index', compact('payments'))
+        return view('payments.index', compact('payments','workers'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
