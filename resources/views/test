@@ -1,0 +1,225 @@
+@extends('admin')
+@section('content')
+
+
+<section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="{{url('home')}}">Home</a></li>
+              <li class="breadcrumb-item active">players</li>
+            </ol>
+            
+          </div>
+          
+        </div>
+        <a class="btn btn-success" href="{{url('addplayer')}}" role="button">New Player</a>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card card-solid">
+        <div class="card-body pb-0">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+              <div class="card bg-light d-flex flex-fill">
+                <div class="card-header text-muted border-bottom-0">
+                  medfielder
+                 
+                </div>
+                <div class="card-body pt-0">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="lead"><b>Thamer sakly</b></h2>
+                      <p class="text-muted text-sm"><b>date of birth: </b> 10/5/1996 </p>
+                      <p class="text-muted text-sm"><b>debut of contrat: </b> 10/5/2020</p>
+                      <p class="text-muted text-sm"><b>end of contrat: </b> 10/5/2023</p>
+                      <p class="text-muted text-sm"><b>salary($): </b> 3000</p>
+                      <p class="text-muted text-sm"><i class="fas fa-lg fa-phone"></i><b> </b> 95897410</p>
+                      <a class="btn btn-primary btn-sm">Edit</a>
+                    <a class="btn btn-danger btn-sm">Delete</a></td>
+                    </div>
+                    <div class="col-5 text-center">
+                      <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="text-right">
+                  <a class="btn btn-block btn-success" href="{{url('addpayments')}}" role="button">pay</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+              <div class="card bg-light d-flex flex-fill">
+                <div class="card-header text-muted border-bottom-0">
+                  Defender
+                </div>
+                <div class="card-body pt-0">
+                  <div class="row">
+                    <div class="col-7">
+                    <h2 class="lead"><b>ahmed</b></h2>
+                      <p class="text-muted text-sm"><b>date of birth: </b> 10/5/1996 </p>
+                      <p class="text-muted text-sm"><b>debut of contrat: </b> 10/5/2020</p>
+                      <p class="text-muted text-sm"><b>end of contrat: </b> 10/5/2023</p>
+                      <p class="text-muted text-sm"><b>salary($): </b> 35000</p>
+                      <p class="text-muted text-sm"><i class="fas fa-lg fa-phone"></i><b> </b> 95894201</p>
+                      <a class="btn btn-primary btn-sm">Edit</a>
+                    <a class="btn btn-danger btn-sm">Delete</a></td>
+                    </div>
+                    <div class="col-5 text-center">
+                      <img src="../../dist/img/user2-160x160.jpg" alt="user-avatar" class="img-circle img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="text-right">
+                  <a class="btn btn-block btn-success" href="{{url('addpayments')}}" role="button">pay</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            
+            
+           
+        <!-- /.card-body -->
+       
+        <!-- /.card-footer -->
+      </div>
+      <!-- /.card -->
+
+    </section>
+@endsection
+
+
+
+ <form action="{{url('player/'.$player->id) }}" method="POST"> 
+                            @csrf
+                            {{method_field('DELETE')}}
+                            <button type="submit" onclick="return confirm('Are you sure you want to delet {{$player->fullname}} ?')" class=" btn-danger btn-sm">supprimer</button>
+                            </form>
+
+
+
+                            //register//
+                            <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Management| Registration Page</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <style>
+    /* On travaille sur la balise body, donc sur TOUTE la page */
+    body{
+        background-image: url("dist/img/c.jpg");
+  
+    }
+   
+      </style>
+</head>
+
+<body  class="hold-transition register-page">
+<div class="register-box">
+  <div class="register-logo">
+    <a href="../../index2.html" style="color:black" font size="5"><b>TeamMangement</b></a>
+  </div>
+
+  <div class="card">
+    <div class="card-body register-card-body">
+      <p class="login-box-msg">Register a new membership</p>
+
+      <form action="../../index.html" method="post">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Full name">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Email">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Budget">
+          <div class="input-group-append">
+            <div class="input-group-text">
+            <span>&#36;</span>
+            </div>
+          </div>
+        </div>
+       
+        <div class="row">
+        <div class="col-6">
+            <button type="submit" class="btn btn-primary btn-danger">Cancel</button>
+          </div>
+          <!-- /.col -->
+          <div class="col-6">
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+    
+
+      <a href="{{url('login')}}" class="text-center">I already have a membership</a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+</body>
+</html>
+
+<span class="text-danger">@error('fullname'){{$message}} @enderror </span>
+
+
+ @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
