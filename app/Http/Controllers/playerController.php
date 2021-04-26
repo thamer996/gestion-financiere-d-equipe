@@ -30,6 +30,7 @@ class playerController extends Controller
             'lastname' => 'required',
             'date_of_birth' => 'required',
             'position' => 'required',
+            'nationality' => 'required',
             'phone_number' => 'required',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
             'debut_of_contrat' => 'required',
@@ -45,6 +46,7 @@ class playerController extends Controller
         $player->lastname = $request->lastname;
         $player->date_of_birth = $request->date_of_birth;
         $player->position = $request->position;
+        $player->nationality = $request->nationality;
         $player->phone_number = $request->phone_number;
         $player->image = $path;
         $player->debut_of_contrat = $request->debut_of_contrat;
@@ -72,6 +74,7 @@ class playerController extends Controller
             'lastname' => 'required',
             'date_of_birth' => 'required',
             'position' => 'required',
+            'nationality' => 'required',
             'phone_number' => 'required',
             'debut_of_contrat' => 'required',
             'end_of_contrat' => 'required',

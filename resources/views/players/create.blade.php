@@ -41,6 +41,7 @@
                 <label for="inputName">Last Name</label>
                 <input type="text" name="lastname" class="form-control" placeholder="last Name" required>
               </div>
+              
               <div class="form-group">
                 <label for="inputName">Date of birth</label>
                 <input type="date" name="date_of_birth" class="form-control" required>
@@ -55,13 +56,17 @@
                          
                         </select>
                       </div>
+                      <div class="form-group">
+                <label for="inputName">nationality</label>
+                <input type="text" name="nationality" class="form-control" placeholder="nationality"  required>
+              </div>
               <div class="form-group">
                 <label for="inputClientCompany">phone number</label>
                 <input type="number" name="phone_number" class="form-control"  placeholder="phone number" required>
               </div>
               <div class="form-group">
                 <strong>player Image:</strong>
-                 <input type="file" name="image" class="form-control" placeholder="Post Title">
+                 <input type="file" name="image" class="form-control" value="public/vm59Oddo3JTifRt8iSv1Zj5Nx3tb9c7M0TiGJ31L.jpg" placeholder="Post Title">
                
             </div>
 </div>
@@ -86,7 +91,7 @@
                 <input type="date" name="debut_of_contrat"  class="form-control">
               </div>
               <div class="form-group">
-                <label for="inputSpentBudget">End of contrat</label>
+                <label for="inputSpentBudget">End of contract</label>
                 <input type="date" name="end_of_contrat" class="form-control">
               </div>
               <div class="form-group">

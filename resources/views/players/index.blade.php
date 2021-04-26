@@ -41,7 +41,7 @@
                             </form>
               <div class="card bg-light d-flex flex-fill">
               
-                <div class="card-header text-muted border-bottom-0">
+                <div class="card-header ">
              <h2><b>{{$player->firstname}} {{$player->lastname}}</b></h2>
                  
                 </div>
@@ -51,7 +51,7 @@
                     
                     <div class="col-6">
                     <p class="text-muted text-sm"><b>position:<br></b> {{$player->position}}</p>
-                      
+                    <p class="text-muted text-sm"><b>nationality:<br></b> {{$player->nationality}}</p>
                       <p class="text-muted text-sm"><b>date of birth:<br></b> {{$player->date_of_birth}}</p>
                       <p class="text-muted text-sm"><b>debut of contract: </b> {{$player->debut_of_contrat}}</p>
                       <p class="text-muted text-sm"><b>end of contract: <br></b> {{$player->end_of_contrat}}</p>

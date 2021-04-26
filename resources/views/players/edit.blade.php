@@ -54,6 +54,10 @@
                          
                         </select>
                       </div>
+                      <div class="form-group">
+                <label for="inputName">nationality</label>
+                <input type="text" name="nationality" class="form-control" value="{{ $player->nationality }}" placeholder="nationality"  required>
+              </div>
               <div class="form-group">
                 <label for="inputClientCompany">phone number</label>
                 <input type="number" name="phone_number" class="form-control" value="{{ $player->phone_number }}"  placeholder="phone number" required>

@@ -19,6 +19,7 @@ class CreatePlayerTable extends Migration
             $table->string('lastname');
             $table->string('date_of_birth');
             $table->string('position');
+            $table->string('nationality');
             $table->integer('phone_number');
             $table->string('image')->nullable();
             $table->string('debut_of_contrat');
